@@ -8,3 +8,4 @@ Bu deneysel repoda .Net tabanlı bir business uygulama geliştirmeye çalışıy
 
 - **Shared:** SDK için gerekli genel türleri içerir _(Result, Error türleri)_
 - **Contracts:** Özellikle SDK tüketicileri için gerekli soyutlamaları içerir. _(Repository, Logger, Event Handlers vs)_
+- **Core:** Genel event'leri, event işleticilerini veya çekirdek yürütücüleri içeren kütüphane. _(Events, Attributes, Dispatchers)_
