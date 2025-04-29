@@ -1,7 +1,7 @@
 namespace Core.Attributes;
 
 [AttributeUsage(AttributeTargets.Class)]
-public class AfterSaveAttributeAttribute
-    :Attribute
+public class AfterSaveAttribute
+    : Attribute
 {
 }

@@ -1,3 +1,6 @@
 namespace Domain;
 
-public interface IIDomainObject;
+public interface IIDomainObject
+{
+    Guid TraceId { get; }
+}
