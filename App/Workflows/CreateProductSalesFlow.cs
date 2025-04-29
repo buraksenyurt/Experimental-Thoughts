@@ -14,19 +14,11 @@ public class CreateProductSalesFlow(IServiceProvider serviceProvider, ILogger lo
     {
         _logger.Info($"Saving {typeof(T).Name}...");
 
-        //var hasAfterSave = typeof(T).GetCustomAttributes(typeof(AfterSaveAttribute), inherit: true).Length != 0;
-        //if (hasAfterSave)
-        //{
         var dispatcher = _serviceProvider.GetRequiredService<EventDispatcher>();
         await dispatcher.DispatchAsync(new BeforeSaveEvent<T>(entity));
 
         _logger.Info("Some save operations");
 
         await dispatcher.DispatchAsync(new AfterSaveEvent<T>(entity));
-        //}
-        //else
-        //{
-        //    _logger.Info($"{typeof(T).Name} has no AfterSave attribute. Skipping push.");
-        //}
     }
 }

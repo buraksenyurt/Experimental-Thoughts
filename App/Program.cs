@@ -1,5 +1,4 @@
 ﻿using App;
-using App.EventHandlers;
 using App.Workflows;
 using Core;
 using Domain.Common;
@@ -16,8 +15,8 @@ internal class Program
 
         services.AddSingleton<EventDispatcher>();
         services.AddTransient<ILogger, Logger>();
-        services.AddTransient<IEventHandler<AfterSaveEvent<ProductSale>>, ProductSalesAfterSaveEventHandler>();
-        services.AddTransient<IEventHandler<BeforeSaveEvent<ProductSale>>, ProductSalesBeforeSaveEventHandler>();
+        services.AddTransient(typeof(IEventHandler<BeforeSaveEvent<ProductSale>>), typeof(BeforeSaveEventHandler<ProductSale>));
+        services.AddTransient(typeof(IEventHandler<AfterSaveEvent<ProductSale>>), typeof(AfterSaveEventHandler<ProductSale>));
 
         var serviceProvider = services.BuildServiceProvider();
 
