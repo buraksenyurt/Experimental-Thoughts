@@ -10,7 +10,8 @@ Bu deneysel repoda .Net tabanlı bir business uygulama geliştirmeye çalışıy
 - **Contracts:** Özellikle SDK tüketicileri için gerekli soyutlamaları içerir. _(Repository, Logger, Event Handlers vs)_
 - **Core:** Genel event'leri, event işleticilerini veya çekirdek yürütücüleri içeren kütüphane. _(Events, Attributes, Dispatchers)_
 - **Domain:** Burası SDK dışında kalması planlanan business odaklı domain nesnelerinin konuşlandırıldığı standart kütüphanedir.
+- **App:** SDK kullanarak bazı iş akışlarını işleten console tabanlı runtime.
 
 ## Todos
 
-- Core ve Domain arasındaki bağımlılık ters görünüyor. Attribute ve Event tanımlamalarını Core dışına almak mantıklı olabilir
+- Core ve Domain arasındaki bağımlılık ters görünüyor. Attribute ve Event tanımlamalarını Core dışına almak mantıklı olabilir.
