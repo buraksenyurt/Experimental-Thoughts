@@ -1,12 +1,12 @@
 ﻿using App;
 using App.EventHandlers;
 using App.Workflows;
-using Contracts;
 using Core;
-using Core.Events;
 using Domain.Common;
 using Domain.Sales;
 using Microsoft.Extensions.DependencyInjection;
+using Shared.Contracts;
+using Shared.Events;
 
 internal class Program
 {
@@ -33,6 +33,11 @@ internal class Program
                     Id = 1,
                     Name = "Book",
                     Description = "Book Category"
+                },
+                Name = "Programming with Rust",
+                Price = new ListPrice
+                {
+                    Value = 34.50m
                 }
             },
             PaymentDate = DateTime.UtcNow.AddDays(1),

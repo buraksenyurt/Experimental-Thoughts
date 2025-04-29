@@ -1,9 +1,7 @@
-using Core.Attributes;
 using Domain.Common;
 
 namespace Domain.Sales;
 
-[AfterSave]
 public class ProductSale
     : IIDomainObject
 {

@@ -1,9 +1,9 @@
-using Contracts;
+using Shared.Contracts;
 
-namespace Core.Events;
+namespace Shared.Events;
 
 public class AfterSaveEvent<T>(T entity)
-    : IBusinessEvent
+    : IEvent
 {
     public T Entity { get; } = entity;
 }

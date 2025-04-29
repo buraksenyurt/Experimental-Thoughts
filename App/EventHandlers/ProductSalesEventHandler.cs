@@ -1,6 +1,6 @@
-using Contracts;
-using Core.Events;
 using Domain.Sales;
+using Shared.Contracts;
+using Shared.Events;
 
 namespace App.EventHandlers;
 

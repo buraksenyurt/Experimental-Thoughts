@@ -1,5 +1,5 @@
-using Contracts;
 using Microsoft.Extensions.DependencyInjection;
+using Shared.Contracts;
 
 namespace Core;
 
@@ -9,7 +9,7 @@ public class EventDispatcher(IServiceProvider serviceProvider, ILogger logger)
     private readonly ILogger _logger = logger;
 
     public async Task DispatchAsync<TEvent>(TEvent @event)
-        where TEvent : IBusinessEvent
+        where TEvent : IEvent
     {
         var handlers = _serviceProvider.GetServices<IEventHandler<TEvent>>();
 
