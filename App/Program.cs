@@ -16,7 +16,8 @@ internal class Program
 
         services.AddSingleton<EventDispatcher>();
         services.AddTransient<ILogger, Logger>();
-        services.AddTransient<IEventHandler<AfterSaveEvent<ProductSale>>, ProductSalesEventHandler>();
+        services.AddTransient<IEventHandler<AfterSaveEvent<ProductSale>>, ProductSalesAfterSaveEventHandler>();
+        services.AddTransient<IEventHandler<BeforeSaveEvent<ProductSale>>, ProductSalesBeforeSaveEventHandler>();
 
         var serviceProvider = services.BuildServiceProvider();
 
