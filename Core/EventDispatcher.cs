@@ -1,7 +1,7 @@
 using Contracts;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Core.Events;
+namespace Core;
 
 public class EventDispatcher(IServiceProvider serviceProvider, ILogger logger)
 {
